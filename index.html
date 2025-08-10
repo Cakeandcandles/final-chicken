@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chickens for Shabbos</title>
+  <style>
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #fff; /* white primary background */
+  color: #001f3f; /* dark navy text */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+/* Background image - full page behind everything */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('https://www.shutterstock.com/image-photo/undefined-orthodox-jewish-man-pray-260nw-2566775823.jpg'); /* put your landing picture URL here */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15; /* subtle faded background */
+  z-index: -1; /* behind everything */
+  pointer-events: none;
+  filter: brightness(90%);
+}
+
+/* Navigation bar */
+nav {
+  background-color: #001f3f; /* dark navy */
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  border-radius: 0 0 10px 10px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: #d4af37; /* gold */
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px 40px 20px;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #001f3f; /* navy */
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.4rem;
+  color: #666666;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Sections */
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px 35px;
+  background-color: #fefefe; /* near white background */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  color: #001f3f;
+}
+
+section h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 18px;
+  border-bottom: 3px solid #d4af37; /* gold underline */
+  padding-bottom: 6px;
+}
+
+section h3 {
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #4a4a4a;
+}
+
+section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333333;
+}
+
+/* About section images */
+.about-img {
+  display: block;
+  max-width: 280px;
+  margin: 25px auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin: 60px auto 20px auto;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  color: #666666;
+  max-width: 900px;
+}
+
+footer a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 12px 20px;
+  }
+
+  section {
+    margin: 25px 15px;
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 2.6rem;
+  }
+
+  header p {
+    font-size: 1.1rem;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+
+  <nav>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/case-studies">Case Studies</a>
+    <a href="/contact-us">Contact Us</a>
+    <a href="/donate">Donate</a>
+  </nav>
+
+  <header>
+    <h1>Chickens for Shabbos</h1>
+    <p>A Program of Young Israel of Kew Gardens Hills</p>
+  </header>
+
+  <section>
+    <h2>Help Us Make A Difference</h2>
+    <p>We provide for the neediest families in Eretz Yisrael.</p>
+  </section>
+
+  <section>
+    <h2>We Focus On Agunos, Grushos & Melamdim</h2>
+    <p>
+      The Young Israel of Kew Gardens Hills (Chickens For Shabbos) has partnered with the American Friends of Yad Eliezer & B'ezri on this Tzedakah. Yad Eliezer provides the infrastructure to collect and process both single and recurring donations, thus providing for the neediest families in Eretz Yisrael with food and clothing, with particular focus on Agunos, Grushos, and Melamdim.
+    </p>
+  </section>
+
+  <section>
+    <h2>Donate</h2>
+    <p>Your donation makes you a partner in the important work we do. We are a 501(c)3 Non-for-Profit Organization (EIN: 11-3459952). All contributions are 100% tax-deductible.</p>
+
+    <h3>Donate to Chickens for Shabbos directly via Bezri.org</h3>
+    <p>This is the website for the American Friends of Yad Eliezer & B’ezri organizations. You can set up recurring donations as well.</p>
+
+    <h3>Donate to Chickens for Shabbos via PayPal</h3>
+    <p>You'll be redirected to the PayPal website to make your donation. You don't have to create an account and can donate using a credit or debit card.</p>
+
+    <h3>Donate directly via Zelle</h3>
+    <p>Zelle address: Chickensforshabbos@bezri.org. In the memo, please specify that the donation is for Chickens for Shabbos.</p>
+
+    <h3>Send A Check</h3>
+    <p>Please mail your check to: The American Friends of Yad Eliezer / B’ezri, 410 Glenn Road, Jackson, NJ 08527. Note/Memo: Donation for Chickens for Shabbos.</p>
+  </section>
+
+
+  <section>
+    <h2>About Us</h2>
+    <img src="YOUR_ROBBY_NEUMAN_IMAGE_URL" alt="Robby Neuman" class="about-img" />
+    <p>
+      Chickens for Shabbos was started in 2004 by Mr. Robby Neuman when he became keenly aware of the plight of Agunos, Grushos, and Melamdim.
+    </p>
+    <img src="YOUR_SECOND_ABOUT_IMAGE_URL" alt="Helping Families" class="about-img" />
+    <p>
+      Guided for many years by Rabbi Fabian Schoenfeld Zt"l of Young Israel of Kew Garden Hills and Rabbi Doniel Lander Shlit"a, it focuses on the harassed and ill-served of Israeli society: divorcees and abandoned women - those left alone to support their families. Since 2011, Chickens for Shabbos has partnered with American Friends of Yad Eliezer/B'ezri and together have distributed nearly $18,000,000.
+    </p> <!--MIGHT NEED TO CHANGE THIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  -->
+  </section>
+
+  <footer>
+    <p>© 2024 Chickens for Shabbos. All rights reserved.</p>
+    <p>לעילוי נשמת חיה בת יוסף דוד ע"ה</p>
+    <p>Site sponsored by Summit Funding Inc. | Powering tomorrow <a href="https://jgrp.dev">jgrp.dev</a></p>
+  </footer>
+
+</body>
+</html>
+
