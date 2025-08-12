@@ -8,15 +8,18 @@
 </head>
 <body>
   <nav>
-    <a href="/about">About</a>
-    <a href="/contact">Contact</a>
-    <a href="/case-studies">Case Studies</a>
-    <a href="/contact-us">Contact Us</a>
-    <a href="https://pay.banquest.com/csq" class="donate-btn">Donate</a>
+    <div class="nav-content">
+      <img src="https://images.squarespace-cdn.com/content/v1/62758d0214ecdd5052f432c8/ddb0c748-7718-4757-a694-094191219017/ChickensForShabbos_logo+png2.png" alt="Chickens for shabbos logo" width="2000px">
+      <a href="#ron-pic">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/contact-us">Contact Us</a>
+    </div>
+    <a href="https://pay.banquest.com/csq" class="donate-btn nav-donate-btn">Donate</a>
   </nav>
 
   <header>
-    <img src="https://images.squarespace-cdn.com/content/v1/62758d0214ecdd5052f432c8/ddb0c748-7718-4757-a694-094191219017/ChickensForShabbos_logo+png2.png" alt="Chickens for shabbos logo" width="450px">
+    <img id="main-img" src="https://images.squarespace-cdn.com/content/v1/62758d0214ecdd5052f432c8/ddb0c748-7718-4757-a694-094191219017/ChickensForShabbos_logo+png2.png" alt="Chickens for shabbos logo" width="450px">
   </header>
 
 
@@ -26,12 +29,12 @@
   </section>
 
   <section class="focus-highlight"> <!--Change the css so it doesnt look so weird-->
-    <h2>We Focus On Agunos, Grushos & Melamdim and we have an innovative library recorded shiurim to help children stay on top of their studies in yeshiva</h2>
+    <h2>We Focus On Agunos, Grushos & Melamdim and we have an innovative library of recorded shiurim to help children stay on top of their studies in yeshiva</h2>
   </section>
 
   <section class="fade-in-on-scroll">
     <h2>Donate</h2>
-    <p>Your donation makes you a partner in the important work we do. We are a 501(c)3 Non-for-Profit Organization (EIN: 11-3459952). All contributions are 100% tax-deductible.</p>
+    <p>Your donation makes you a partner in the important work we do. We are a 501(c)3 Non-for-Profit Organization (EIN: 11-1752021). All contributions are 100% tax-deductible.</p>
 
     <!--<h3>Donate to Chickens for Shabbos directly via Bezri.org</h3>
     <p>This is the website for the American Friends of Yad Eliezer & B'ezri organizations. You can set up recurring donations as well.</p>
@@ -57,7 +60,7 @@
   <section class="fade-in-on-scroll">
     <h2>About Us</h2>
     <img src="https://images.squarespace-cdn.com/content/v1/62758d0214ecdd5052f432c8/d377a89b-e5c7-4ee2-b21d-8745955e4ed6/rabbi.jpg" alt="Robby Neuman" class="about-img" />
-    <p>
+    <p id="ron-pic">
       Chickens for Shabbos was started in 2004 by Mr. Robby Neuman when he became keenly aware of the plight of Agunos, Grushos, and Melamdim.
     </p>
     <p>
@@ -71,9 +74,10 @@
 
 </body>
 <script>
+  // For fadng in certain objects:
 // Fade in hero-highlight section on page load
 window.addEventListener('DOMContentLoaded', function() {
-  var hero = document.getElementById('hero-highlight');
+  const hero = document.getElementById('hero-highlight');
   if(hero) {
     setTimeout(function() {
       hero.classList.add('visible');
@@ -81,11 +85,11 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
   // Fade in .fade-in-on-scroll elements when they enter viewport
-  var fadeEls = document.querySelectorAll('.fade-in-on-scroll');
-  var revealOnScroll = function() {
-    var windowBottom = window.innerHeight + window.scrollY;
+  const fadeEls = document.querySelectorAll('.fade-in-on-scroll');
+  const revealOnScroll = function() {
+    const windowBottom = window.innerHeight + window.scrollY;
     fadeEls.forEach(function(el) {
-      var elTop = el.getBoundingClientRect().top + window.scrollY;
+      const elTop = el.getBoundingClientRect().top + window.scrollY;
       if(windowBottom > elTop + 80) {
         el.classList.add('visible');
       }
