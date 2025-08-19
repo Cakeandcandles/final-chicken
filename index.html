@@ -10,10 +10,7 @@
   <nav>
     <div class="nav-content">
       <img src="https://images.squarespace-cdn.com/content/v1/62758d0214ecdd5052f432c8/ddb0c748-7718-4757-a694-094191219017/ChickensForShabbos_logo+png2.png" alt="Chickens for shabbos logo" width="2000px">
-      <a href="#ron-pic">About</a>
-      <a href="/contact">Contact</a>
-      <a href="/case-studies">Case Studies</a>
-      <a href="/contact-us">Contact Us</a>
+      <a href="#picture-of-mr-robby" class="about-btn">About</a>
     </div>
     <a href="https://pay.banquest.com/csq" class="donate-btn nav-donate-btn">Donate</a>
   </nav>
@@ -25,34 +22,37 @@
 
   <section class="hero-highlight" id="hero-highlight">
     <h2>Help Us Make A Difference</h2>
-    <p>We provide for the neediest families in Eretz Yisrael.</p>
   </section>
 
-  <section class="focus-highlight"> <!--Change the css so it doesnt look so weird-->
+  <!--THIS IS WHERE THE VIDEO WILL GO-->
+
+  <section class="focus-highlight"> 
     <h2>We Focus On Agunos, Grushos & Melamdim and we have an innovative library of recorded shiurim to help children stay on top of their studies in yeshiva</h2>
+    <div id="number-info-div">
+      <p id="number-info">
+        To access our recorded shiurim library and support your child's yeshiva studies, 
+        call us at <a href="tel:13479661130"><strong>1-347-966-1130</strong></a>.  
+        We'll be happy to guide you through the available options.
+      </p>
+    </div>
+
   </section>
 
   <section class="fade-in-on-scroll">
     <h2>Donate</h2>
-    <p>Your donation makes you a partner in the important work we do. We are a 501(c)3 Non-for-Profit Organization (EIN: 11-1752021). All contributions are 100% tax-deductible.</p>
-
-    <!--<h3>Donate to Chickens for Shabbos directly via Bezri.org</h3>
-    <p>This is the website for the American Friends of Yad Eliezer & B'ezri organizations. You can set up recurring donations as well.</p>
-
-    <h3>Donate to Chickens for Shabbos via PayPal</h3>
-    <p>You'll be redirected to the PayPal website to make your donation. You don't have to create an account and can donate using a credit or debit card.</p>
-  -->
-    <h2>Donate directly via Zelle</h2>
-    <p>Zelle address: cfsofqueens@gmail.com. In the memo, please specify that the donation is for Chickens for Shabbos.</p>
-    <button id="copy-btn" onclick="copyText()">Copy Zelle address</button>
-
-    <!--<h3>Send A Check</h3>
-    <p>Please mail your check to: The American Friends of Yad Eliezer / B'ezri, 410 Glenn Road, Jackson, NJ 08527. Note/Memo: Donation for Chickens for Shabbos.</p>-->
-
-    <div style="max-width:650px;margin:38px auto 0 auto;">
-      <div class="donate-cc-heading">Donate with your credit card</div>
-      <div class="donate-cc-desc">Click the button below to securely make your donation by credit card and help support our mission.</div>
-      <a href="https://pay.banquest.com/csq" class="donate-cc-btn" target="_blank" rel="noopener">Donate Now</a>
+    <div class="donate-split-container">
+      <div class="donate-split-left">
+        <h3>Donate with Zelle</h3>
+        <p>Your donation makes you a partner in the important work we do. We are a 501(c)3 Non-for-Profit Organization (EIN: 11-1752021). All contributions are 100% tax-deductible.</p>
+        <p>Zelle address: <b>cfsofqueens@gmail.com</b><br>In the memo, please specify that the donation is for Chickens for Shabbos.</p>
+        <button id="copy-btn" onclick="copyText()">Copy Zelle address</button>
+      </div>
+      <div class="donate-split-divider"></div>
+      <div class="donate-split-right">
+        <h3>Donate with Credit Card</h3>
+        <div class="donate-cc-desc">Click the button below to securely make your donation by credit card and help support our mission.</div>
+        <a href="https://pay.banquest.com/csq" class="donate-cc-btn" target="_blank" rel="noopener">Donate Now</a>
+      </div>
     </div>
   </section>
 
@@ -60,11 +60,11 @@
   <section class="fade-in-on-scroll">
     <h2>About Us</h2>
     <img src="https://images.squarespace-cdn.com/content/v1/62758d0214ecdd5052f432c8/d377a89b-e5c7-4ee2-b21d-8745955e4ed6/rabbi.jpg" alt="Robby Neuman" class="about-img" />
-    <p id="ron-pic">
+    <p id="picture-of-mr-robby">
       Chickens for Shabbos was started in 2004 by Mr. Robby Neuman when he became keenly aware of the plight of Agunos, Grushos, and Melamdim.
     </p>
     <p>
-      Guided for many years by Rabbi Fabian Schoenfeld Zt"l of Young Israel of Kew Garden Hills and Rabbi Doniel Lander Shlit"a, it focuses on the harassed and ill-served of Israeli society: divorcees and abandoned women - those left alone to support their families. Since 2011, Chickens for Shabbos has partnered with American Friends of Yad Eliezer/B'ezri and together have distributed nearly $18,000,000.
+      Guided for many years by Rabbi Fabian Schoenfeld Zt"l of Young Israel of Kew Garden Hills and Rabbi Doniel Lander Shlit"a, it focuses on the harassed and ill-served of Israeli society: divorcees and abandoned women - those left alone to support their families. Since 2011, Chickens for Shabbos has distributed nearly $23,000,000.
     </p>
   </section>
 
@@ -74,8 +74,6 @@
 
 </body>
 <script>
-  // For fadng in certain objects:
-// Fade in hero-highlight section on page load
 window.addEventListener('DOMContentLoaded', function() {
   const hero = document.getElementById('hero-highlight');
   if(hero) {
@@ -84,7 +82,6 @@ window.addEventListener('DOMContentLoaded', function() {
     }, 200);
   }
 
-  // Fade in .fade-in-on-scroll elements when they enter viewport
   const fadeEls = document.querySelectorAll('.fade-in-on-scroll');
   const revealOnScroll = function() {
     const windowBottom = window.innerHeight + window.scrollY;
@@ -96,7 +93,7 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   };
   window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll(); // Initial check
+  revealOnScroll();
 });
 
 function copyText() {
@@ -114,4 +111,3 @@ function copyText() {
 }
 </script>
 </html>
-

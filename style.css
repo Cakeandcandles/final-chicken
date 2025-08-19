@@ -1,9 +1,102 @@
-/* Nav logo: stick left, always visible and crisp on desktop */
+.donate-split-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  background: linear-gradient(90deg, #e3f0ff 60%, #fffbe7 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 18px #0d47a144;
+  max-width: 900px;
+  margin: 38px auto 0 auto;
+  padding: 0;
+  position: relative;
+  min-height: 320px;
+}
+.donate-split-left, .donate-split-right {
+  flex: 1 1 0;
+  padding: 38px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.donate-split-left h3, .donate-split-right h3 {
+  font-size: 1.5rem;
+  color: #0d47a1;
+  font-weight: 900;
+  margin-bottom: 1.1rem;
+  margin-top: 0;
+  letter-spacing: 0.03em;
+}
+.donate-split-left p {
+  font-size: 1.13rem;
+  color: #0d47a1;
+  font-weight: 500;
+  margin-bottom: 1.1rem;
+}
+.donate-split-divider {
+  width: 2px;
+  background: linear-gradient(180deg, #1976d2 0%, #ffd600 100%);
+  margin: 0;
+  border-radius: 2px;
+  min-height: 220px;
+  align-self: stretch;
+  box-shadow: 0 0 8px #1976d244;
+}
+.donate-split-right {
+  border-radius: 0 18px 18px 0;
+}
+.donate-split-left {
+  border-radius: 18px 0 0 18px;
+}
+@media (max-width: 900px) {
+  .donate-split-container {
+    flex-direction: column;
+    min-height: unset;
+    padding: 0;
+  }
+  .donate-split-divider {
+    width: 100%;
+    height: 2px;
+    min-height: unset;
+    margin: 0 0 18px 0;
+    background: linear-gradient(90deg, #1976d2 0%, #ffd600 100%);
+    align-self: center;
+  }
+  .donate-split-left, .donate-split-right {
+    border-radius: 18px;
+    padding: 28px 12px 18px 12px;
+  }
+}
+.about-btn {
+  background: linear-gradient(90deg, #1976d2 0%, #0d47a1 100%);
+  color: #fff !important;
+  font-weight: 700;
+  padding: 10px 68px;
+  border-radius: 24px;
+  font-size: 1.13rem;
+  box-shadow: 0 2px 8px #1976d233;
+  border: none;
+  outline: none;
+  text-decoration: none !important;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  margin: 0 auto;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+}
+.about-btn:hover, .about-btn:focus {
+  background: linear-gradient(90deg, #0d47a1 0%, #1976d2 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px #1976d255;
+}
 .nav-content {
   display: flex;
   align-items: center;
   gap: 35px;
-  justify-content: flex-start;
+  justify-content: space-between;
+  width: 100%;
 }
 .nav-content img {
   height: 60px;
@@ -21,10 +114,8 @@
   box-shadow: 0 2px 8px #001f3f22;
 }
 nav {
-  justify-content: flex-start;
   display: flex;
   align-items: center;
-  gap: 35px;
   background-color: #001f3f;
   padding: 15px 30px;
   border-radius: 0 0 10px 10px;
@@ -37,7 +128,6 @@ nav {
     display: none !important;
   }
 }
-/* Hide nav links on mobile, show only donate button */
 .nav-donate-btn {
   margin-left: 35px;
 }
@@ -54,13 +144,15 @@ nav {
     border-radius: 24px;
     text-align: center;
   }
+  .about-btn {
+    display: none !important;
+  }
   nav {
     justify-content: center !important;
     gap: 0 !important;
     padding: 12px 8px !important;
   }
 }
-/* Always center the main image */
 #main-img {
   display: block;
   margin-left: auto;
@@ -80,7 +172,6 @@ html, body {
   max-width: 100vw;
   overflow-x: hidden;
 }
-/* Donate with Credit Card Section */
 .donate-cc-heading {
   font-size: 2.1rem;
   color: #fff;
@@ -260,7 +351,6 @@ html, body {
     padding: 0 4px;
   }
 }
-/*START*/
 .fade-in-on-scroll {
   opacity: 0;
   transform: translateY(40px);
@@ -270,7 +360,6 @@ html, body {
   opacity: 1;
   transform: translateY(0);
 }
-/* Hero Highlight Section */
 .hero-highlight {
   max-width: 900px;
   margin: 40px auto 0 auto;
@@ -332,8 +421,8 @@ html, body {
 }
 
 body {
-  background-color: #fff; /* white primary background */
-  color: #001f3f; /* dark navy text */
+  background-color: #fff;
+  color: #001f3f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -346,18 +435,17 @@ body::before {
   content: "";
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url('praying.png'); /* put your landing picture URL here */
+  background-image: url('praying.png'); 
   background-size: cover;
   background-position: center;
-  opacity: 0.38; /* slightly more visible background */
-  z-index: -1; /* behind everything */
+  opacity: 0.38; 
+  z-index: -1; 
   pointer-events: none;
   filter: brightness(98%);
 }
 
-/* Navigation bar */
 nav {
-  background-color: #001f3f; /* dark navy */
+  background-color: #001f3f; 
   padding: 15px 30px;
   display: flex;
   justify-content: center;
@@ -373,7 +461,7 @@ nav {
   background: linear-gradient(90deg, #ffd600 0%, #ffe082 100%);
   color: #001f3f !important;
   font-weight: 700;
-  padding: 10px 28px;
+  padding: 10px 28px; 
   border-radius: 24px;
   font-size: 1.13rem;
   box-shadow: 0 2px 8px #ffd60033;
@@ -419,7 +507,7 @@ nav {
 
 
 nav a {
-  color: #d4af37; /* gold */
+  color: #d4af37; 
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s ease;
@@ -431,7 +519,7 @@ nav a:focus {
   text-decoration: underline;
 }
 
-/* Header */
+
 header {
   text-align: center;
   padding: 60px 20px 40px 20px;
@@ -440,7 +528,7 @@ header {
 header h1 {
   font-size: 3.5rem;
   font-weight: 800;
-  color: #001f3f; /* navy */
+  color: #001f3f; 
   margin-bottom: 10px;
 }
 
@@ -451,12 +539,12 @@ header p {
   letter-spacing: 0.02em;
 }
 
-/* Sections */
+
 section {
   max-width: 900px;
   margin: 40px auto;
   padding: 25px 35px;
-  background-color: #fefefe; /* near white background */
+  background-color: #fefefe; 
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   color: #001f3f;
@@ -466,7 +554,7 @@ section h2 {
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 18px;
-  border-bottom: 3px solid #d4af37; /* gold underline */
+  border-bottom: 3px solid #d4af37; 
   padding-bottom: 6px;
 }
 
@@ -484,7 +572,18 @@ section p {
   color: #333333;
 }
 
-/* About section images */
+#number-info-div {
+  background-color: white;
+  border: 2px solid gold;
+}
+
+
+#number-info {
+  color: black;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+
 .about-img {
   display: block;
   max-width: 280px;
@@ -493,7 +592,7 @@ section p {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-/* Footer */
+
 footer {
   text-align: center;
   margin: 60px auto 20px auto;
@@ -513,7 +612,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 700px) {
   nav {
     flex-wrap: wrap;
@@ -535,7 +634,7 @@ footer a:hover {
   }
 }
 
-/* CAREFUL */
+
 @media (max-width: 700px) {
   #main-img {
     align-self: center;
